@@ -1,9 +1,0 @@
-
-
-
-<bean id="vProjectAccountReportDao" class="org.mybatis.spring.mapper.MapperFactoryBean" parent="baseDAO">
-	<property name="mapperInterface" value="com.haier.openplatform.alm.project.dao.VProjectAccountReportDAO" />
-</bean>
-<bean id="vProjectAccountReportService" class="com.haier.openplatform.alm.project.service.impl.VProjectAccountReportServiceImpl" parent="activitiBaseService">
-	<property name="vProjectAccountReportDao" ref="vProjectAccountReportDao"></property>
-</bean>	
