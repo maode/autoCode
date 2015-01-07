@@ -1,0 +1,93 @@
+package com.haier.openplatform.alm.project.domain;
+import com.haier.openplatform.domain.BaseDomain;
+
+public class VProjectAccountReport extends SearchModel{
+  	//
+	private String projectId;
+  	//
+	private String projectStatus;
+  	//
+	private String projectType;
+  	//
+	private String projectName;
+  	//
+	private java.util.Date pEstimateSt;
+  	//
+	private java.util.Date pEstimateEt;
+  	//
+	private Long pEstimateAmount;
+  	//
+	private String pmName;
+  	//
+	private String contractCode;
+  	//
+	private String contractStatus;
+  	//
+	private Double contractAmount;
+  	//
+	private String firstParty;
+  	//
+	private String firstCode;
+  	//
+	private String supplierCode;
+  	//
+	private String supplierName;
+  	//
+	private String milestone;
+  	//
+	private String milestoneDesc;
+  	//
+	private String isMilestone;
+  	//
+	private String isPayment;
+  	//
+	private String milestoneStatus;
+  	//
+	private java.util.Date mEstimateSt;
+  	//
+	private java.util.Date mEstimateEt;
+  	//
+	private java.util.Date mActualEt;
+  	//
+	private java.util.Date mModifySt;
+  	//
+	private java.util.Date mModifyEt;
+  	//
+	private java.util.Date mEstimatePayT;
+  	//
+	private java.util.Date mApplyPayT;
+  	//
+	private Double mEstimateAmount;
+  	//
+	private Double mActulAmount;
+  	//
+	private String mYfwfAmount;
+  	//
+	private String almStatus;
+  	//
+	private String bccStatus;
+  	//
+	private String evsStatus;
+  	//
+	private String aoCode;
+  	//
+	private String azCode;
+  	//
+	private String budgetName;
+  	//
+	private String budgetType;
+  	//
+	private Long budgetYear;
+  	//
+	private String jyt;
+  	//
+	private String department;
+  	//
+	private String budgetBu;
+  	//
+	private String budgetPl;
+  	//
+	private String budgetMark;
+  	//
+	private Double budgetAmount;
+}

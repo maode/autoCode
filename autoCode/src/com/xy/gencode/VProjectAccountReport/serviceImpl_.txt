@@ -1,0 +1,56 @@
+@Transactional(readOnly=false)
+public class VProjectAccountReportServiceImpl extends BaseActivitiService implements VProjectAccountReportService {
+	private VProjectAccountReportDAO vProjectAccountReportDao;
+
+	/*
+	 * 保存vProjectAccountReport
+	 */
+	@Override
+	public void saveVProjectAccountReport(VProjectAccountReport model) {
+		vProjectAccountReportDao.saveVProjectAccountReport(model);
+	}
+	/*
+	 * 根据id删除 vProjectAccountReport
+	 */
+	@Override
+	public void deleteVProjectAccountReportByid(VProjectAccountReport model) {
+		vProjectAccountReportDao.delVProjectAccountReport(model);
+	}
+
+	/**
+	 * 根据id得到vProjectAccountReport
+	 */
+	@Override
+	@Transactional(readOnly=true)
+	public VProjectAccountReport getVProjectAccountReportById(VProjectAccountReport model) {
+		return vProjectAccountReportDao.getVProjectAccountReportById(model.getId());
+	}
+	/*
+	 * 更新 vProjectAccountReport
+	 */
+	@Override
+	public void updateVProjectAccountReport(VProjectAccountReport model) {
+		vProjectAccountReportDao.updateVProjectAccountReport(model);
+	}
+	@Override
+	@Transactional(readOnly=true)
+	public Pager<VProjectAccountReport> searchVProjectAccountReportPager(VProjectAccountReport model) {
+		List<VProjectAccountReport> yslist = vProjectAccountReportDao.searchVProjectAccountReportPagerList(model);
+		Long count = vProjectAccountReportDao.getVProjectAccountReportsPagerCount(model);
+		return Pager.cloneFromPager(model.getPager(), count,yslist);
+	}
+
+/**
+	 * @return the vProjectAccountReportDao
+	 */
+	public VProjectAccountReportDAO getVProjectAccountReportDao() {
+		return vProjectAccountReportDao;
+	}
+	/**
+	 * @param vProjectAccountReportDao the vProjectAccountReportDao to set
+	 */
+	public void setVProjectAccountReportDao(VProjectAccountReportDAO vProjectAccountReportDao) {
+		this.vProjectAccountReportDao = vProjectAccountReportDao;
+	}
+	
+}

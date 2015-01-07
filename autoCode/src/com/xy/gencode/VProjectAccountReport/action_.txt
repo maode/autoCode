@@ -1,0 +1,81 @@
+
+/**
+ * @author Administrator
+ *	VProjectAccountReport维护action
+ */
+public class VProjectAccountReportAction extends BaseProjectAction{
+	private VProjectAccountReportService vProjectAccountReportService;
+	private VProjectAccountReport model = new VProjectAccountReport();
+	private Pager pager = new Pager();
+	/**
+	* 分页查询
+	* VProjectAccountReport
+	*/
+	@Override
+	public String execute() throws Exception {
+		model.setPager(pager);
+		this.pager = vProjectAccountReportService.searchVProjectAccountReportPager(model);
+		return SUCCESS;
+	}
+	/**
+	* 保存实体
+	* VProjectAccountReport
+	*/
+	public String saveVProjectAccountReport(){
+		vProjectAccountReportService.saveVProjectAccountReport(model);
+		return SUCCESS;
+	}
+	/**
+	* 根据id删除实体
+	* VProjectAccountReport
+	*/
+	public String delVProjectAccountReportByidNosec(){
+		try{
+			vProjectAccountReportService.deleteVProjectAccountReportByid(model);
+		}catch(Exception e){
+			this.getJsonResult().setFlag(false);
+			this.getJsonResult().setMsg(e.getMessage());
+		}
+		return SUCCESS;
+	}
+	
+	/**
+	*修改实体
+	* VProjectAccountReport
+	*/
+	public String toUpdateVProjectAccountReportNosec(){
+		model = vProjectAccountReportService.getVProjectAccountReportById(model);
+		return SUCCESS;
+	}
+	public String updateVProjectAccountReportNosec(){
+		try{
+			vProjectAccountReportService.updateVProjectAccountReport(model);
+		}catch(Exception e){
+			this.getJsonResult().setFlag(false);
+			this.getJsonResult().setMsg(e.getMessage());
+		}
+		return SUCCESS;
+	}
+	/**
+	* 根据id得到实体
+	* VProjectAccountReport
+	*/
+	public String getVProjectAccountReport(){
+		model = vProjectAccountReportService.getVProjectAccountReportById(model);
+		return SUCCESS;
+	}
+	
+	
+	public Pager getPager() {
+		return pager;
+	}
+	public void setPager(Pager pager) {
+		this.pager = pager;
+	}
+	public VProjectAccountReport getModel() {
+		return model;
+	}
+	public void setModel(VProjectAccountReport model) {
+		this.model = model;
+	}
+}

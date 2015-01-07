@@ -1,0 +1,13 @@
+
+public interface VProjectAccountReportService {
+
+	void saveVProjectAccountReport(VProjectAccountReport model);
+
+	void deleteVProjectAccountReportByid(VProjectAccountReport model);
+
+	VProjectAccountReport getVProjectAccountReportById(VProjectAccountReport model);
+
+	void updateVProjectAccountReport(VProjectAccountReport model);
+
+	Pager searchVProjectAccountReportPager(VProjectAccountReport model);
+}
