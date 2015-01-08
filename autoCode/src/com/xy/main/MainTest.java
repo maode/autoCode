@@ -131,7 +131,7 @@ public class MainTest {
 			}
 		}
 	
-		System.out.println("生成结束。。。");
+		System.out.println("生成结束。。。..");
 	}
 	
 	
